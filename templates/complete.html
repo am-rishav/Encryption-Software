@@ -1,0 +1,9 @@
+<h1> Upload Complete </h1>
+<form id="filename-form" action="{{ url_for('encrypt') }}" method="POST">
+  <p> The following file has been uploaded: </p>
+
+  <input type="text" name = "target" size="50" value=" {{ target }}" > </input>
+  <input type="text" name = "filename" size="50" value=" {{ filename }}" > </input>
+  <p>Press the button to encrypt your file </p>
+  <input type="submit" value="encrypt">
+  </form>

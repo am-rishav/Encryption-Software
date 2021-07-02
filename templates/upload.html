@@ -1,0 +1,30 @@
+<head>
+  <title> Upload </title>
+</head>
+<body>
+  <SCRIPT>
+function ShowAndHide() {
+  var x = document.getElementById('SectionName');
+  if (x.style.display == 'none') {
+      x.style.display = 'block';
+  } else {
+      x.style.display = 'none';
+  }
+}
+</SCRIPT>
+  <h1> Welcome to my Encryption Software </h1>
+  <h2> You can upload your files here and it will encrypt it for you and generate a key file <h2>
+
+  <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" >
+<!--
+    <p> Click here if you already have public and private keys: </p>
+    <button type="button" ONCLICK="ShowAndHide()" name="keys" value="yes"></button>
+    <DIV ID="SectionName" STYLE="display:none">
+      <input type="file"  multiple>
+    </DIV>
+    -->
+    <input type="submit" value="send">
+
+  </form>
+  </body>
